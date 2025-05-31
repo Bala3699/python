@@ -1,0 +1,60 @@
+import random
+import time
+b=input("entre the name:")
+print("Hi MR",b)
+time.sleep(2)
+c=input("entre the name:")
+print("Hi MR",b)
+time.sleep(1)
+print("welcome to the club")
+print("ready for the task")
+print("1: are you going to risk")
+print("2: or you going to run")
+print("3: my choice")
+d=int(input ("enter the option"))
+if d==1:
+    print("pay $100 as a bet")
+    time.sleep(3)
+    print("bala3sd699@oksbi")
+if d==2:
+    print("just go away cowerd")
+   
+if d==3:
+    d=random.randint(1, 2)
+    print(d)
+if d==1:
+    print("your are in Danger")
+    time.sleep(2)
+    print("now iam watching you")
+    time.sleep(2)
+    print("now you have to do my task els i kill you")
+    print("pay $100 as a bet")
+    time.sleep(3)
+    print("bala3sd699@oksbi")
+    
+    print("MR ",b,"MR",c)
+    time.sleep(3)
+    player1=b
+    player2=c
+    print("player1:",b)
+    time.sleep(1)
+    print("player2:",c)
+    time.sleep(1)
+    c=random.choice([player1,player2])
+    print(c)
+    print("cut you friends hair")
+    time.sleep(3)
+    print("you have 15 sec or you will be died")
+    print("15sec left")
+    time.sleep(10)
+    print("5sec left")
+    time.sleep(5)
+    print("time out")
+    print("have you did")
+    time.sleep(1)
+    k=input("have you did ")
+    
+
+    
+else:
+    print("get lost")
