@@ -1,0 +1,7 @@
+def fac(n):
+    if(n==1):
+        return 2 
+    b=fac(n-1)
+    print("Hai",end=" ")
+    return b+1 
+print(fac(5))
