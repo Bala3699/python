@@ -1,3 +1,5 @@
+#Type 1:
+
 def fac(n):
     if(n==1):
         return 2 
@@ -5,3 +7,15 @@ def fac(n):
     print("Hai",end=" ")
     return b+1 
 print(fac(5))
+
+
+#Type 2:
+
+def fac(n,c):
+    if(n==4):
+        return 1
+    c=c+1
+    b=fac(n+1,c)
+    print(c,end=" ")
+    return b*2 
+print(fac(1,1))
