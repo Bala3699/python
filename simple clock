@@ -1,0 +1,14 @@
+import time
+import sys
+
+def digital_clock():
+    try:
+        while True:
+            current_time = time.strftime('%H:%M:%S')
+            sys.stdout.write('\r' + "current time "+current_time)
+            sys.stdout.flush()
+            time.sleep(1)
+    except KeyboardInterrupt:
+        sys.stdout.write('\nClock stopped.\n')
+
+digital_clock()
