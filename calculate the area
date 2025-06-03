@@ -1,0 +1,48 @@
+import time
+while True:
+    time.sleep(1)
+    print("Calculate area:")
+    print("1. Circle")
+    print("2. Rectangle")
+    print("3. Triangle")
+    print("4. Square")
+    print("5. Exit")
+    pie=3.14
+    time.sleep(1)
+    choice = input("Enter your choice (1-5): ")
+    if choice == '1':
+        time.sleep(1)
+        radius = float(input("Enter the radius of the circle: "))
+        area =pie * radius ** 2
+        time.sleep(1)
+        print(f"Area of the circle: {area:.2f}")
+              
+    elif choice == '2':
+        time.sleep(1)
+        length = float(input("Enter the length of the rectangle: "))
+        time.sleep(1)
+        width = float(input("Enter the width of the rectangle: "))
+        area = length * width
+        time.sleep(1)
+        print(f"Area of the rectangle: {area:.2f}")
+    elif choice == '3':
+        time.sleep(1)
+        base = float(input("Enter the base of the triangle: "))
+        time.sleep(1)
+        height = float(input("Enter the height of the triangle: "))
+        area = 0.5 * base * height
+        time.sleep(1)
+        print(f"Area of the triangle: {area:.2f}")
+    elif choice == '4':
+            time.sleep(1)
+            side = float(input("Enter the side length of the square: "))
+            area = side ** 2
+            time.sleep(1)
+            print(f"Area of the square: {area:.2f}")
+    elif choice == '5':
+        time.sleep(1)
+        print("Exiting program. Goodbye!")
+        break
+    else:
+        time.sleep(1)
+        print("Invalid choice. Please enter a number between 1 and 5.")
