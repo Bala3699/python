@@ -1,3 +1,5 @@
+#without arguments
+
 class sim:
     def add(self):
         return self.a+self.b
@@ -10,3 +12,14 @@ print(s.add())
 print(s.dis())
         
     
+#with arguments
+
+
+class sim:
+    def add(self,r):
+        return 3.14*self.r*self.r
+    def dis(self,r):
+        self.r=r
+c=sim()
+a=c.dis(10)
+print(c.add(a))        
