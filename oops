@@ -45,3 +45,37 @@ r.set(3,6)
 r.le()
 r.wid()
 r.ca()
+
+
+#for emploie
+
+class con:
+    con_na="coni"
+    con_pr=10
+    def set(self,name,age,salary,shar_per):
+        self.name=name
+        self.age=age
+        self.salary=salary
+        self.shar_per=shar_per
+        self.tax=0
+        self.share=1
+    def cal_tax(self):
+        self.tax(self.salary*con.tax_perse)//100
+    def cal_shar(self):
+        self.shar(self.salary*self.shar_per)//100
+    def dis(self):
+        self.cal_tax()
+        self.cal_shar()
+        print("company",con_na)
+        print("name",self.name)
+        print("age", self.age)
+        print("sal",self.salary)
+        print("tax",self.tax_per)
+        print("share",self.share)
+emp1=con()
+emp2=con()
+emp1=set("sajan",21,100,5)
+emp1=set("sudharshan",21,10,1)
+emp1.dis()
+print("-----------")
+
