@@ -23,3 +23,25 @@ class sim:
 c=sim()
 a=c.dis(10)
 print(c.add(a))        
+
+
+#basic-oop-encapsulation-example
+
+
+class simple:
+        def set(self,a,b):
+            self.a=a
+            self.b=b
+        def le(self):
+            print(self.a)
+            
+        def wid(self):
+            print(self.b)
+        def ca(self):
+            print(self.a*self.b)
+
+r=simple()
+r.set(3,6)
+r.le()
+r.wid()
+r.ca()
