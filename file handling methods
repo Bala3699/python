@@ -1,0 +1,5 @@
+file =open("vijay.xls","w")
+file.write("iam a bat boy \n")
+file.write("iam a devil \n")
+file.close()
+print("program is executed sucessfully")
