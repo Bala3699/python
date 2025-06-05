@@ -1,0 +1,16 @@
+import qrcode
+
+text = "pay 2000 to bm200@oksbi"
+
+r = qrcode.QRCode(
+    version=1,
+    error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=10,
+    border=4,
+)
+
+r.add_data(text)
+r.make(fit=True)
+
+img = r.make_image(fill_color="black", back_color="white")
+img.show()
