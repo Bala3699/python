@@ -1,0 +1,19 @@
+# Function Execution Timer Decorator
+
+import time
+
+def timer(fun):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        res = fun(*args, **kwargs)
+        end = time.time()
+        print("time taken: {:.2f} sec".format(end - start))
+        return res
+    return wrapper
+
+@timer
+def slo():
+    time.sleep(5)
+    print("Finished")
+
+slo()
