@@ -1,0 +1,13 @@
+# Function Wrapper Decorator Demo
+
+
+def dec(org):
+    def wrapper1():
+        print("------")
+        org()
+        print("********")
+    return wrapper1
+@dec
+def abc():
+    print("Hellow!")
+abc()
