@@ -1,0 +1,5 @@
+# Unique Word Lengths Using Set Comprehension 
+
+uniqu={len(word) for word in ["hi","hello","dark","hi"]}
+print(uniqu)
+
