@@ -1,0 +1,11 @@
+#  Python Program: Fibonacci Generator
+
+
+def gen(x):
+    a, b = 0, 1
+    for i in range(x):
+        yield a
+        a, b = b, a + b
+
+for i in gen(7):
+    print(i, end='?')
