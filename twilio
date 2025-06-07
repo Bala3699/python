@@ -1,0 +1,19 @@
+#sms 
+
+from twilio.rest import Client
+
+account_sid = ''
+auth_token = ''
+
+client = Client(account_sid, auth_token)
+
+to_number = input("enter the number")
+
+for i in range(100):
+    body_text = f"I am Watching YOU #{i+1}"
+    message = client.messages.create(
+        body=body_text,
+        from_='+17623571836',
+        to=to_number
+    )
+    print(f"Message {i+1} sent! SID: {message.sid}")
