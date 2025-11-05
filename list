@@ -1,0 +1,23 @@
+# list functions
+
+
+
+fruits = ["apple", "banana", "cherry"]
+cars = ['Ford', 'BMW', 'Volvo']
+fruits.insert(1, "orange")
+fruits.extend(cars)
+fruits.pop(5)
+fruits.remove("banana")
+fruits.append("orange")
+x = fruits.copy()
+z = fruits.copy()
+m = fruits.index("cherry")
+y = fruits.count("cherry")
+fruits.reverse()
+print(x)
+print(m)
+cars.sort()
+print(z)
+z.clear()
+
+print(fruits)
