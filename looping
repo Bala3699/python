@@ -1,0 +1,37 @@
+# 🔁 Python Looping Statements
+This notebook covers various examples of Python loops (`for` and `while`) with problems and solutions.
+## ✅ Problem 1: Print numbers using `for` loop
+# Print numbers from 1 to 5 using a for loop
+for i in range(1, 6):
+    print("Number:", i)
+## ✅ Problem 2: Print numbers using `while` loop
+# Print numbers from 1 to 5 using a while loop
+i = 1
+while i <= 5:
+    print("Number:", i)
+    i += 1
+## ✅ Problem 3: Loop through a list
+fruits = ['apple', 'banana', 'cherry']
+for fruit in fruits:
+    print(f"I like {fruit}")
+## ✅ Problem 4: Use `break` in a `while` loop
+count = 0
+while True:
+    if count == 3:
+        break
+    print("Count is:", count)
+    count += 1
+## ✅ Problem 5: Nested `for` loops
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"i={i}, j={j}")
+## ✅ Problem 6: Use `continue` in a loop
+for i in range(5):
+    if i == 2:
+        continue
+    print("i =", i)
+## ✅ Problem 7: Loop through two lists using `zip()`
+names = ['Alice', 'Bob', 'Charlie']
+ages = [25, 30, 35]
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old")
