@@ -1,0 +1,47 @@
+# 🧩 Python Functions
+This notebook covers various examples of Python functions with problems and solutions.
+## ✅ Problem 1: Create and call a basic function
+def greet():
+    print("Hello, welcome to Python functions!")
+
+greet()
+## ✅ Problem 2: Function with parameters
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("Sum:", result)
+## ✅ Problem 3: Function with default parameters
+def greet(name="User"):
+    print(f"Hello, {name}!")
+
+greet()
+greet("Alice")
+## ✅ Problem 4: Function that returns a value
+def square(x):
+    return x * x
+
+print("Square of 4 is", square(4))
+## ✅ Problem 5: Function with `*args`
+def total_sum(*args):
+    return sum(args)
+
+print("Total:", total_sum(1, 2, 3, 4))
+## ✅ Problem 6: Function with `**kwargs`
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key} = {value}")
+
+print_info(name="Alice", age=25, city="New York")
+## ✅ Problem 7: Recursive function (Factorial)
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print("Factorial of 5 is", factorial(5))
+
+
+
+
