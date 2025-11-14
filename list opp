@@ -1,0 +1,276 @@
+# Question 1
+# Write a Python program that performs the following operations on a list:
+
+### 1. Create a list of integers: [10, 20, 30, 40, 50]
+
+### 2. Append the number 60 to the list.
+
+### 3. Remove the second element from the list.
+
+### 4. Insert the number 25 at the second position.
+
+### 5. Sort the list in descending order.
+
+### 6. Find the length of the list.
+
+### 7. Access the last element in the list without using a negative index.
+
+# 1. Create a list of integers
+ex_list = [10, 20, 30, 40, 50]
+print("Initial list:", ex_list)
+
+# 2. Append the number 60 to the list
+ex_list.append(60)
+print("After appending 60:", ex_list)
+
+# 3. Remove the second element (index 1)
+ex_list.pop(1)
+print("After removing the second element:", ex_list)
+
+# 4. Insert the number 25 at the second position (index 1)
+ex_list.insert(1, 25)
+print("After inserting 25 at the second position:", ex_list)
+
+# 5. Sort the list in descending order
+ex_list.sort(reverse=True)
+print("List sorted in descending order:", ex_list)
+
+# 6. Find the length of the list
+list_length = len(ex_list)
+print("Length of the list:", list_length)
+
+
+print(ex_list[-1])
+''' 
+last_element = ex_list[5]
+print("Last element in the list:", last_element)
+'''
+
+# Question 2:
+## Create a list of fruits 
+## "apple", "banana", "cherry", "date", "elderberry". Perform the following operations:
+
+### 1. Count how many times "banana" appears in the list.
+### 2. Extend the list by adding the elements from another list ["fig", "grape"].
+### 3. Reverse the list.
+### 4. Find the index of "cherry".
+### 5.Remove "date" from the list.
+# 1. Create a list of fruits
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+
+# 2. Count how many times "banana" appears in the list
+banana_count = fruits.count("banana")
+print("Count of 'banana':", banana_count)
+
+# 3. Extend the list with another list
+fruits.extend(["fig", "grape"])
+print("After extending the list:", fruits)
+
+# 4. Reverse the list
+fruits.reverse()
+print("Reversed list:", fruits)
+
+# 5. Find the index of "cherry"
+cherry_index = fruits.index("cherry")
+print("Index of 'cherry':", cherry_index)
+
+# 6. Remove "date" from the list
+fruits.remove("date")
+print("After removing 'date':", fruits)
+
+# Question 3:
+# Create a list of integers 15, 25, 35, 45, 55 
+# and perform the following operations:
+
+### 1. Insert the number 30 at the third position.
+### 2. Sort the list in ascending order.
+### 3. Make a copy of the list.
+### 4. Clear all elements from the original list.
+### 5. Check if the copied list still has the elements.
+# 1. Create a list of integers
+numbers = [15, 25, 35, 45, 55]
+
+# 2. Insert the number 30 at the third position (index 2)
+numbers.insert(2, 30)
+print("After inserting 30 at third position:", numbers)
+
+# 3. Sort the list in ascending order
+numbers.sort()
+print("Sorted list:", numbers)
+
+# 4. Make a copy of the list
+numbers_copy = numbers.copy()
+print("Copy of the list:", numbers_copy)
+
+# 5. Clear the original list
+numbers.clear()
+print("Original list after clearing:", numbers)
+
+# 6. Check if the copied list still has elements
+print("Copied list:", numbers_copy)
+
+
+# Question 4:
+# Create a list "cat", "dog", "elephant", "horse". 
+# Perform the following operations:
+
+### 1. Add "tiger" to the end of the list using a list method.
+### 2. Remove the first element of the list.
+### 3. Create a list of numbers and find the maximum, minimum, and sum of the list [100, 200, 300, 400].
+### 4. Check if "dog" is in the list.
+### 5. Sort the animal list alphabetically.
+# 1. Create a list of animals
+animals = ["cat", "dog", "elephant", "horse"]
+
+# 2. Add "tiger" to the end of the list
+animals.append("tiger")
+print("After appending 'tiger':", animals)
+
+# 3. Remove the first element of the list
+animals.pop(0)
+print("After removing the first element:", animals)
+
+# 4. Create a list of numbers and find the max, min, and sum
+numbers = [100, 200, 300, 400]
+max_number = max(numbers)
+min_number = min(numbers)
+sum_numbers = sum(numbers)
+print(f"Max: {max_number}, Min: {min_number}, Sum: {sum_numbers}")
+
+# 5. Check if "dog" is in the list
+is_dog_in_list = "dog" in animals
+print("Is 'dog' in the list:", is_dog_in_list)
+
+# 6. Sort the animal list alphabetically
+animals.sort()
+print("Sorted list of animals:", animals)
+
+# SLICING 
+# Question 1:
+# Given the list of numbers 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 
+# perform the following operations using slicing:
+
+### 1. Get the first 5 elements of the list.
+### 2. Get the last 3 elements of the list.
+### 3. Get every second element from the list.[::2]
+### 4. Reverse the list using slicing.
+### 5. Get all elements except the first and last elements.
+# 1. Create a list of numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 2. Get the first 5 elements
+first_five = numbers[:5]
+print("First 5 elements:", first_five)
+
+# 3. Get the last 3 elements
+last_three = numbers[-3:]
+print("Last 3 elements:", last_three)
+
+# 4. Get every second element
+every_second = numbers[::2]
+print("Every second element:", every_second)
+
+# 5. Reverse the list using slicing
+reversed_list = numbers[::-1]
+print("Reversed list:", reversed_list)
+
+# 6. Get all elements except the first and last two
+middle_elements = numbers[1:-1]
+print("All elements except the first and last two:", middle_elements)
+
+# Question 2:
+# Given the list "a", "b", "c", "d", "e", "f", "g", "h"
+# perform the following slicing operations:
+
+### 1. Get the first 4 elements.
+### 2. Get every third element starting from the second element.
+### 3. Get the elements from index 2 to 5 (inclusive of 2, but exclusive of 5).
+### 4. Reverse the elements from index 1 to 6 (inclusive of 1, exclusive of 6).
+### 5. Get the last 5 elements using negative indexing and slicing.
+# 1. Create a list of letters
+letters = ["a", "b", "c", "d", "e", "f", "g", "h"]
+
+# 2. Get the first 4 elements
+first_four = letters[:4]
+print("First 4 elements:", first_four)
+
+# 3. Get every third element starting from the second element (index 1)
+every_third_from_second = letters[1::3]
+print("Every third element from second:", every_third_from_second)
+
+# 4. Get the elements from index 2 to 5 (inclusive of index 2, exclusive of index 5)
+subset = letters[2:5]
+print("Elements from index 2 to 5:", subset)
+
+# 5. Reverse the elements from index 1 to 6 (inclusive of 1, exclusive of 6)
+reversed_subset = letters[1:6][::-1]
+print("Reversed elements from index 1 to 6:", reversed_subset)
+
+# 6. Get the last 5 elements using negative indexing
+last_five = letters[-5:]
+print("Last 5 elements:", last_five)
+
+# Question 3:
+# Given a list of words "python", "java", "c++", "ruby", "go", "swift", "kotlin"
+# use list slicing to:
+
+### 1. Extract the middle 3 words.
+### 2. Get the list in reverse order using slicing.
+### 3. Get every word except the first two.
+### 4. Extract the first two elements and the last two elements and combine them into a new list.
+### 5. Get every second word starting from the third word in the list.
+# 1. Create a list of programming languages
+languages = ["python", "java", "c++", "ruby", "go", "swift", "kotlin"]
+
+# 2. Extract the middle 3 words
+middle_three = languages[2:5]
+print("Middle 3 words:", middle_three)
+
+# 3. Get the list in reverse order using slicing
+reversed_languages = languages[::-1]
+print("List in reverse order:", reversed_languages)
+
+# 4. Get every word except the first two
+except_first_two = languages[2:]
+print("All except first two:", except_first_two)
+
+# 5. Extract the first two elements and last two elements and combine them
+first_two_and_last_two = languages[:2] + languages[-2:]
+print("First two and last two combined:", first_two_and_last_two)
+
+# 6. Get every second word starting from the third word
+every_second_from_third = languages[2::2]
+print("Every second word from third:", every_second_from_third)
+
+# Question 4:
+# Given a list of numbers 11, 22, 33, 44, 55, 66, 77, 88, 99
+# perform the following slicing operations:
+
+### 1. Get all elements from the third to the seventh element (inclusive).
+### 2. Get every second element from the entire list starting from the beginning.
+### 3. Reverse the sublist that contains elements from the 4th to 8th positions.
+### 4. Use slicing to create a copy of the original list.
+### 5. Get the first 4 elements and then reverse just those 4 elements.
+# 1. Create a list of numbers
+numbers = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+
+# 2. Get all elements from the third to the seventh element (inclusive of index 2, exclusive of index 7)
+subset = numbers[2:7]
+print("Elements from index 2 to 7:", subset)
+
+# 3. Get every second element from the entire list
+every_second = numbers[::2]
+print("Every second element:", every_second)
+
+# 4. Reverse the sublist that contains elements from the 4th to 8th positions (index 3 to 7)
+reversed_subset = numbers[3:8][::-1]
+print("Reversed sublist from index 3 to 7:", reversed_subset)
+
+# 5. Use slicing to create a copy of the original list
+copy_list = numbers[:]
+print("Copy of the list:", copy_list)
+
+# 6. Get the first 4 elements and reverse just those
+first_four_reversed = numbers[:4][::-1]
+print("First 4 elements reversed:", first_four_reversed)
+
