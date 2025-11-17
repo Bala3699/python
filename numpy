@@ -24,3 +24,5 @@ print(a1.ndim)
 print(a2.ndim)
 print(a3.ndim)
 
+a3=np.array([[[1,2,3],[6,5,4],[0,2,3]]])
+print(a3[0,0,0],a3[0,1,0],a3[0,2,0])
