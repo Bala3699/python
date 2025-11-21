@@ -1,0 +1,50 @@
+import math
+
+print("=== 4 Player Survival Number Game ===")
+
+points = [0, 0, 0, 0]       
+alive = [True, True, True, True]   
+
+while True:
+    print("\nCurrent Points:")
+    for i in range(4):
+        status = "(DEAD)" if not alive[i] else ""
+        print(f"Player {i+1}: {points[i]} {status}")
+
+    active_players = [i for i in range(4) if alive[i]]
+    if len(active_players) == 1:
+        winner_index = active_players[0]
+        print(f"\n FINAL WINNER: Player {winner_index + 1} 🎉")
+        break
+
+    print("\nEnter numbers from 1 to 100:")
+
+    nums = []
+
+    # Take input only from alive players
+    for i in range(4):
+        if alive[i]:
+            n = int(input(f"Player {i+1} choose number: "))
+            nums.append((i, n))     
+    avg = sum(n for _, n in nums) / len(nums)
+    target = avg * 0.8
+
+    print(f"\nAverage = {avg}")
+    print(f"Target (avg × 0.8) = {target}")
+
+    diffs = [(abs(n - target), i) for i, n in nums]
+    diffs.sort()
+    winner = diffs[0][1]    
+    print(f"\nPlayer {winner + 1} wins this round!")
+
+    for i in range(4):
+        if alive[i]:
+            if i == winner:
+                points[i] += 1
+            else:
+                points[i] -= 1
+
+    for i in range(4):
+        if alive[i] and points[i] <= -5:
+            alive[i] = False
+            print(f"\n Player {i+1} is DEAD (reached -5 points)")
