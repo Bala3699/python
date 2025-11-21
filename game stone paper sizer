@@ -1,0 +1,44 @@
+# game
+
+import random
+
+print("Stone - Paper - Scissor Game")
+target_wins = int(input("How many wins are needed to win the game? "))
+us = 0
+cs = 0
+print("Enter your choice:")
+while us < target_wins and cs < target_wins:
+    print("1. Stone")
+    print("2. Paper")
+    print("3. Scissor")
+
+
+    uc = int(input("Your choice (1/2/3): "))
+
+
+    cc = random.randint(1, 3)
+
+
+    choices = {1: "Stone", 2: "Paper", 3: "Scissor"}
+    print("You chose:", choices[uc])
+    print("Computer chose:", choices[cc])
+
+    if uc == cc:
+        print("It's a Draw!")
+    elif (uc == 1 and cc == 3) or \
+         (uc == 2 and cc == 1) or \
+         (uc == 3 and cc == 2):
+        print("You Win this round!")
+        us += 1
+    else:
+        print("Computer Wins this round!")
+        cs += 1
+
+    print(f"Score -> You: {us}  Computer: {cs}")
+
+    
+if us == target_wins:
+    print("\n CONGRATULATIONS! You won the game!")
+else:
+    print("\n Computer won the game!")
+
