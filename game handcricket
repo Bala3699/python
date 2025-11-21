@@ -1,0 +1,101 @@
+# game
+
+import random
+
+print("=== HAND CRICKET GAME ===")
+
+
+print("\nTOSS TIME!")
+ut = input("Choose Head or Tail (H/T): ").upper()
+tr = random.choice(["H", "T"])
+
+print("Toss result:", "Head" if tr == "H" else "Tail")
+
+if ut == tr:
+    print("--------------------")
+    print("You won the toss!")
+    print("--------------------")
+    user_choice = input("Bat or Bowl? (B/A): ").upper()
+else:
+    print("--------------------")
+    print("Computer won the toss!")
+    print("--------------------")
+    user_choice = random.choice(["B", "A"])
+    print("Computer chooses:", "Bat" if user_choice == "B" else "Bowl")
+
+
+us = 0
+cs = 0
+
+if user_choice == "B":
+    print("\nYou are batting first!")
+
+    while True:
+        user = int(input("Enter your run (1-10): "))
+        comp = random.randint(1, 10)
+        print("Computer bowled:", comp)
+
+        if user == comp:
+            print("You are OUT!")
+            break
+        else:
+            us += user
+            print("Your Score:", us)
+
+    print("\nYour innings ends with:", us)
+    print("\nComputer now batting...")
+
+    while cs <= us:
+        user = int(input("Enter your bowl (1-10): "))
+        comp = random.randint(1, 10)
+        print("Computer played:", comp)
+
+        if user == comp:
+            print("Computer is OUT!")
+            break
+        else:
+            cs += comp
+            print("Computer Score:", cs)
+
+
+else:
+    print("\nComputer is batting first!")
+
+    while True:
+        user = int(input("Enter your bowl (1-10): "))
+        comp = random.randint(1, 10)
+        print("Computer played:", comp)
+
+        if user == comp:
+            print("Computer is OUT!")
+            break
+        else:
+            cs += comp
+            print("Computer Score:", cs)
+
+    print("\nComputer innings ends with:", cs)
+    print("\nYou are now batting...")
+
+    while us <= cs:
+        user = int(input("Enter your run (1-10): "))
+        comp = random.randint(1, 10)
+        print("Computer bowled:", comp)
+
+        if user == comp:
+            print("You are OUT!")
+            break
+        else:
+            us += user
+            print("Your Score:", us)
+
+
+print("\n--- MATCH RESULT ---")
+print("Your Score:", us)
+print("Computer Score:", cs)
+
+if us > cs:
+    print(" You Win!")
+elif us < cs:
+    print("Computer Wins!")
+else:
+    print("Match Draw!")
