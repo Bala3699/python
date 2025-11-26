@@ -1,0 +1,62 @@
+# Basic operation using pandas
+
+importing pandas to manuplate dataset 
+
+import pandas as pd
+a=pd.read_csv("iris.csv")
+
+it shows the top elements in the dataset
+
+a.head()
+a.head(5)
+
+
+tails shows the bottom elements in the dataset
+
+
+
+a.tail()
+a.tail(3)
+
+info provide the information summery about the dataset
+
+a.info()
+
+
+describe say about the numerical expansion about the dataset
+
+a.describe()
+
+colums coloums it describes about the colums
+
+a.columns
+
+shape descripes about the row and colums about the dataset
+
+
+
+a.shape
+
+it check for the duplicate row
+
+a.duplicated()
+
+it shows the unique value in columns
+
+a['sepal_length'].unique()
+
+it count the number of unique value in the colums
+
+a['sepal_length'].nunique()
+
+to check the null value
+
+a.isnull()
+
+to count the nul value 
+
+a.isnull().sum()
+
+to check there is any value is exist
+
+a.isnull().values.any()
