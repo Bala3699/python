@@ -1,0 +1,37 @@
+# Line Plot – plt.plot()
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+a = [1, 2, 3]
+b = [5, 7, 1]
+
+sns.lineplot(x=a, y=b)
+
+plt.title("Seaborn")
+plt.xlabel("X axis")
+plt.ylabel("Y axis")
+plt.show()
+
+# Bar Graph – plt.bar()
+
+a = ['A', 'B', 'C', 'D']
+b = [10, 20, 55, 25]
+
+plt.bar(a, b)
+plt.title("Bar ")
+plt.xlabel("Categories")
+plt.ylabel("Values")
+plt.show()
+
+
+# Histogram – plt.hist()
+
+d = [10, 12, 15, 15, 20, 22, 22, 23, 25, 30, 30, 35]
+
+plt.hist(d, bins=5)
+plt.title("Histogram ")
+plt.xlabel("Value Range")
+plt.ylabel("Frequency")
+plt.show()
