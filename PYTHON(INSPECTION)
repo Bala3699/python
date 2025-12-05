@@ -64,3 +64,28 @@ plt.pie(sizes, labels=labels, wedgeprops={'width':0.4}, autopct='%1.1f%%')
 plt.title("Donut Chart - Species Share")
 plt.show()
 
+# 9 pair plot 
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+data=sns.load_dataset('iris')
+sns.pairplot(data=data,hue='species')
+
+plt.show()
+
+
+# pivot
+
+file_pivot = fli.pivot(index='month', columns='year', values='passengers')
+file_pivot.head()
+
+# heatmap
+
+file_pivot = fli.pivot(index='month', columns='year', values='passengers')
+file_pivot.head()
+
+plt.figure(figsize=(10,8))
+ax=sns.heatmap(file_pivot,annot=True,fmt='g')
+
+
+
