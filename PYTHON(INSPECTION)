@@ -1,0 +1,66 @@
+# Simple Graph Documentation Using Iris Dataset
+
+# 1. Bar Plot
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+from seaborn import load_dataset
+
+df = load_dataset('iris')
+
+sns.countplot(x='species', data=df)
+plt.title("Bar Plot - Species Count")
+plt.show()
+
+# 2. Line Graph
+
+plt.plot(df.index, df['sepal_length'])
+plt.title("Line Graph - Sepal Length Trend")
+plt.xlabel("Index")
+plt.ylabel("Sepal Length")
+plt.show()
+
+# 3. Pie Chart
+
+sizes = df['species'].value_counts()
+labels = sizes.index
+
+plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+plt.title("Pie Chart - Species Percentage")
+plt.show()
+
+# 4. Histogram
+
+plt.hist(df['sepal_length'], bins=10)
+plt.title("Histogram - Sepal Length Distribution")
+plt.xlabel("Sepal Length")
+plt.ylabel("Frequency")
+plt.show()
+
+ # 5. Scatter Plot
+
+sns.scatterplot(x='sepal_length', y='sepal_width', data=df, hue='species')
+plt.title("Scatter Plot - Sepal Length vs Width")
+plt.show()
+
+#  6. Box Plot
+
+sns.boxplot(x='species', y='sepal_length', data=df)
+plt.title("Box Plot - Sepal Length by Species")
+plt.show()
+
+# 7. Violin Plot
+
+sns.violinplot(x='species', y='petal_length', data=df)
+plt.title("Violin Plot - Petal Length by Species")
+plt.show()
+
+#  8. Donut Chart
+
+sizes = df['species'].value_counts()
+labels = sizes.index
+
+plt.pie(sizes, labels=labels, wedgeprops={'width':0.4}, autopct='%1.1f%%')
+plt.title("Donut Chart - Species Share")
+plt.show()
+
