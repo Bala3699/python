@@ -1,12 +1,9 @@
----
-
 # 🚀 15-Day Python Mastery Program
 
 **Based on *Introduction to Python Programming* (OpenStax, 2024)**
 
 A **strict, disciplined, professional Python learning plan** focused on real understanding — not shortcuts.
 
----
 
 ## 📌 Rules (Non-Negotiable)
 
