@@ -8,9 +8,6 @@ A **strict, disciplined, professional Python learning plan** focused on real und
 ## 📌 Rules (Non-Negotiable)
 
 * No chapters skipped
-* Every chapter follows **Teach → Homework → Test**
-* Tests are **mandatory**
-* Progress only after **passing**
 * This document is the **single source of truth**
 
 ---
